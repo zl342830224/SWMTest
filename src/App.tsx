@@ -1,26 +1,18 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { GlobalStyle } from "./styles/globalStyle";
+import News from "./screens/News";
+import newsData from "./news.json";
+import useDynamicFontSize from "./utils/use-dynamic-font-size";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+const App: React.FC = () => {
+    useDynamicFontSize(8);
+
+    return (
+        <>
+            <GlobalStyle />
+            <News articles={newsData.articles} />;
+        </>
+    );
+};
 
 export default App;

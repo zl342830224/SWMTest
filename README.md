@@ -1,46 +1,98 @@
-# Getting Started with Create React App
+# Code Test for SWM interview
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project is a code test implementation using Create React App with TypeScript, Styled Components, and Jest. It aims to demonstrate the usage of various components, styles, and utility functions related to articles and news. Also this project have responseive web designs to satisfy main displays.
 
-## Available Scripts
+# Getting Started
 
-In the project directory, you can run:
+To get started with the project, follow these steps:
 
-### `npm start`
+1, Make sure your node version is latest than v14
+2, Clone the repository to your local machine.
+3, Install the project dependencies by running [npm install] in the project root directory.
+4,Start the development server by running npm start.
+5,Open your browser and navigate to http://localhost:3000 to view the application.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Testing
+The project includes a example test cases to ensure the correctness of its functionality. To run the tests, use the following command:
+[npm test]
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+# Project Structure
 
-### `npm test`
+The project structure is organized as follows:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+src
+├── utils
+│ └── use-dynamic-font-size.ts
+├── styles
+│ ├── article.ts
+│ ├── news.ts
+│ └── globalStyle.ts
+├── types
+│ ├── article-container-props.ts
+│ ├── article-data.ts
+│ ├── article-props.ts
+│ └── news-props.ts
+├── components
+│ └── assets
+│ └── Article.tsx
+├── screens
+│ └── News.tsx
+├── fonts
+├── App.tsx
+├── index.tsx
+└── news.json
+test
+└── utils
+└── use-dynamic-font-size.test.ts
 
-### `npm run build`
+# src/utils
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+use-dynamic-font-size.ts: This file contains a custom hook called useDynamicFontSize that handles the dynamic font size logic.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+# src/styles
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+-article.ts: This file defines the CSS styles for the article component.
 
-### `npm run eject`
+-news.ts: This file defines the CSS styles for the news component.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+-globalStyle.ts: This file defines global styles for the entire application.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+# src/types
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+-article-container-props.ts: This file defines the property types for the article container component.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+-article-data.ts: This file defines the data structure for articles.
 
-## Learn More
+-article-props.ts: This file defines the property types for the article component.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+-news-props.ts: This file defines the property types for the news component.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+# src/components
+
+-assets: This directory is used to store images for the components.
+
+-Article.tsx: This file contains the implementation of the article screen, which displays head, teaser, byline, image.
+
+# src/screens
+
+-News.tsx: This file contains the implementation of the news screen, which displays news articles.
+
+# src/fonts
+
+This directory is used to store font files used in the application.
+
+# src/news.json
+
+This file contains sample news data used in the application.
+
+# test/utils
+
+-use-dynamic-font-size.test.ts: This file contains test cases for the useDynamicFontSize hook.
+
+# Some Stretches
+
+1, Component Testing: Expand my test coverage by writing more comprehensive unit tests for your components, especially for UI perspective. Aim to cover different use cases and edge cases to ensure the reliability and correctness of my code.
+
+2, Error Handling: Implement proper error handling mechanisms, such as error boundaries or global error handlers, to handle and display errors gracefully to users. In this project, I'm using import "new.json" directly, If using Json-web-server framework, I could add useUrl hook to mock fetch data from API, or build a api server to do that. When interact with API should condsider errors, especially the aritcle data issue, this can enhance the user experience and provide better feedback when issues occur.
+
+3, Performance Optimization: many areas where I can optimize performance, such as implementing lazy loading for articles resources, skeleton screen implementation, Loading status, Refactor the layout and DOM structure of components and pages based on requirements. This can improve the overall user experience and make the application more efficient.
