@@ -6,7 +6,7 @@ This project is a code test implementation using Create React App with TypeScrip
 
 To get started with the project, follow these steps:
 
-1, Make sure your node version is latest than v14
+1, Make sure your node version is at least v14, best is v18.
 2, Clone the repository to your local machine.
 3, Install the project dependencies by running [npm install] in the project root directory.
 4,Start the development server by running npm start.
